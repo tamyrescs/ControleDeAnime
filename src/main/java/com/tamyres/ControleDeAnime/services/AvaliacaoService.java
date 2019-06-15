@@ -63,6 +63,6 @@ public class AvaliacaoService {
 	}
 	
 	private void updateData(Avaliacao newObj, Avaliacao obj) {
-		newObj.setMidia(obj.getMidia());
+		newObj.setMidias(obj.getMidias());
 	}
 }

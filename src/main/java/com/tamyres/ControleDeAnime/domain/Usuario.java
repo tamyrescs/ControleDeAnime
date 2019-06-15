@@ -10,6 +10,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 public class Usuario implements Serializable {
@@ -24,6 +28,9 @@ public class Usuario implements Serializable {
 	private String nome;
 	private String email;
 	private String telefone;
+	
+	@JsonFormat (pattern="dd/MM/yyyy")
+	@Temporal(TemporalType.DATE)
 	private Date dataNasc;
 
 	@OneToMany(mappedBy="usuario")

@@ -27,7 +27,7 @@ public class DBService {
 	public void instantiateTestDatabase() throws ParseException {
 	
 
-	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy ");
+	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	
 	Usuario usu1 = new Usuario(null, "tamyrescs","1234","Tamyres Carla","tamyrescarla@gmail.com", "83993952690",sdf.parse("11/08/1997")); 
 	Usuario usu2 = new Usuario(null, "thaiscs","4321","Thaís Karla","thaiskarla@gmail.com", "83999952600",sdf.parse("01/06/1992")); 

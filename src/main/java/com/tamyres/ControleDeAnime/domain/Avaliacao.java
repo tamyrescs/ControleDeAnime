@@ -1,6 +1,8 @@
 package com.tamyres.ControleDeAnime.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,7 +22,7 @@ public class Avaliacao implements Serializable {
 	private Integer qtdEstrelas;
 
 	@OneToMany(mappedBy="avaliacao")
-	private Midia midia;
+	private List<Midia> midias = new ArrayList<>();
 	
 	
 	/*@ManyToOne
@@ -28,7 +30,6 @@ public class Avaliacao implements Serializable {
 	private Midia midia;*/
 	
 	
-
 	public Avaliacao() {
 	}
 
@@ -64,12 +65,12 @@ public class Avaliacao implements Serializable {
 		this.qtdEstrelas = qtdEstrelas;
 	}
 
-	public Midia getMidia() {
-		return midia;
+	public List<Midia> getMidias() {
+		return midias;
 	}
 
-	public void setMidia(Midia midia) {
-		this.midia = midia;
+	public void setMidias(List<Midia> midias) {
+		this.midias = midias;
 	}
 
 	@Override
